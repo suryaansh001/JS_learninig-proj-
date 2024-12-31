@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake-Water-Gun Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center min-h-screen py-10">
+
+    <h1 class="text-4xl font-extrabold text-yellow-400 mb-6">Snake-Water-Gun Game</h1>
+
+    <!-- Start Button -->
+    <button id="start-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded mb-8 transition duration-300">
+        Start Game
+    </button>
+
+    <!-- Camera Video Feed -->
+    <div class="flex flex-col items-center">
+        <h3 class="text-2xl font-semibold mb-4">Your Gesture</h3>
+        <video id="camera" autoplay class="border-4 border-yellow-400 rounded-lg shadow-lg mb-8"></video>
+    </div>
+
+    <!-- Computer's Choice -->
+    <div class="flex flex-col items-center">
+        <h3 class="text-2xl font-semibold mb-4">Computer's Choice</h3>
+        <img id="computer-choice" src="" alt="Computer's Choice" class="hidden w-48 h-48 rounded-lg shadow-lg mb-8">
+    </div>
+
+    <!-- Score Table -->
+    <table class="table-auto text-lg text-center bg-gray-800 rounded-lg shadow-lg mb-6">
+        <thead>
+            <tr>
+                <th class="px-6 py-3 border-b border-yellow-400">Player</th>
+                <th class="px-6 py-3 border-b border-yellow-400">Computer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="user-score" class="px-6 py-3 text-yellow-400 font-semibold">0</td>
+                <td id="computer-score" class="px-6 py-3 text-yellow-400 font-semibold">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Result -->
+    <h2 class="text-3xl font-bold text-green-400 mb-4">Result:</h2>
+    <p class="result text-xl" id="result-text">Click Start to Begin!</p>
+
+    <script src="camera.js"></script>
+</body>
+</html>
